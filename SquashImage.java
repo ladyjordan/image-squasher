@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-import java.awt.image.*;  //java.awt.image.BufferedImage
+import java.awt.image.*;  
 import javax.imageio.*;
 import javax.imageio.stream.ImageOutputStream;
 
@@ -24,7 +24,7 @@ class SquashImage {
       ImageWriteParam instructor = swriter.getDefaultWriteParam();
       instructor.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
       instructor.setCompressionQuality(0.1f); 
-      
+
       swriter.write(null, new IIOImage(bufferedImage, null, null), instructor);
        
       os.close();
